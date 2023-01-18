@@ -4,13 +4,12 @@ import { useFetch } from "./hooks/useFetch";
 import { MapView } from "./components/MapView";
 import { Card } from "./components/Card";
 
-const API_KEY = import.meta.env.VITE_SOME_KEY
-console.log(API_KEY)
 export const AddressTrackerApp = () => {
 
   const [searchIP, setsearchIP] = useState("0");
 
   const [haveLine, setHaveLine] = useState(false)
+  
   const onNewIP = (newIP) => {
     setsearchIP(newIP);
   };
