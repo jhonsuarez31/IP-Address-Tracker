@@ -15,7 +15,7 @@ export const AddressTrackerApp = () => {
   };
 
   const { data, isLoading } = useFetch(
-    `https://geo.ipify.org/api/v2/country,city?apiKey=at_Uu9f3xbpkQcDpTzDVzVOGIndcbT5h&ipAddress=${searchIP}`,
+    `https://geo.ipify.org/api/v2/country,city?apiKey=at_rSExoLJEtDibx7nb94nzYirMNgLC3&ipAddress=${searchIP}`,
     []
   );
   return (
