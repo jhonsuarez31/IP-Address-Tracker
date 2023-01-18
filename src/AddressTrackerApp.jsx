@@ -7,6 +7,7 @@ import { Card } from "./components/Card";
 export const AddressTrackerApp = () => {
   const [searchIP, setsearchIP] = useState("0");
 
+  const [haveLine, setHaveLine] = useState(false)
   const onNewIP = (newIP) => {
     setsearchIP(newIP);
   };
@@ -24,10 +25,10 @@ export const AddressTrackerApp = () => {
       ) : (
         <>
         <div className="card-conatiner">
-          <Card title="IP ADDRESS" message={data.ip} />
-          <Card title="LOCATION" message={ [data.location.city,',', data.location.region] } />
-          <Card title="TIME ZONE" message={`UTC ${data.location.timezone}`} />
-          <Card title="I S P" message={data.isp} />
+          <Card title="IP ADDRESS" message={data.ip} haveLine  />
+          <Card title="LOCATION" message={ [data.location.city,',', data.location.region] } haveLine />
+          <Card title="TIME ZONE" message={`UTC ${data.location.timezone}`} haveLine />
+          <Card title="I S P" message={data.isp} haveLine={false} />
         </div>
         <MapView lat= {data.location.lat} lng = {data.location.lng} />
         </>

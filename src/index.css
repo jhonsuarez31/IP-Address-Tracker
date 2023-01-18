@@ -90,7 +90,7 @@
   }
 
   .card {
-    height: 50%;
+    min-height: 50px !important; 
     width: 10rem;
     display: flex;
     flex-direction: column;
@@ -98,10 +98,8 @@
 
   .card-line {
     border-right: solid 0.5px gray;
-    min-width: 12rem;
+    width: 14em;
     height: 4rem !important;
-    display: flex;
-    justify-content: space-between;
   }
 
   .card p {
@@ -111,8 +109,9 @@
   }
 
   .card h2 {
-    font-size: 24px;
+    font-size: 22px;
     padding-top: 12px;
+    padding-right: 20px;
     font-weight: 900;
   }
 
