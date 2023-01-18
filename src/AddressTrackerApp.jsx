@@ -30,7 +30,7 @@ export const AddressTrackerApp = () => {
         <>
         <div className="card-conatiner">
           <Card title="IP ADDRESS" message={data.ip} haveLine  />
-          <Card title="LOCATION" message={ [data.location.city,',', data.location.region] } haveLine />
+      
           <Card title="TIME ZONE" message={`UTC ${data.location.timezone}`} haveLine />
           <Card title="I S P" message={data.isp} haveLine={false} />
         </div>
