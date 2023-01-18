@@ -5,7 +5,7 @@ import { MapView } from "./components/MapView";
 import { Card } from "./components/Card";
 
 const API_KEY = import.meta.env.VITE_SOME_KEY
-
+console.log(API_KEY)
 export const AddressTrackerApp = () => {
 
   const [searchIP, setsearchIP] = useState("0");
@@ -16,7 +16,7 @@ export const AddressTrackerApp = () => {
   };
 
   const { data, isLoading } = useFetch(
-    `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${searchIP}`,
+    `https://geo.ipify.org/api/v2/country,city?apiKey=at_Uu9f3xbpkQcDpTzDVzVOGIndcbT5h&ipAddress=${searchIP}`,
     []
   );
   return (
@@ -26,11 +26,12 @@ export const AddressTrackerApp = () => {
       
       {isLoading ? (
         <div>Cargando</div>
+        
       ) : (
         <>
         <div className="card-conatiner">
           <Card title="IP ADDRESS" message={data.ip} haveLine  />
-      
+          <Card title="LOCATION" message={ [data.location.city,',', data.location.region] } haveLine />
           <Card title="TIME ZONE" message={`UTC ${data.location.timezone}`} haveLine />
           <Card title="I S P" message={data.isp} haveLine={false} />
         </div>
