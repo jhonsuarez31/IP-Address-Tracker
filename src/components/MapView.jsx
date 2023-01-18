@@ -30,7 +30,8 @@ export const MapView = ({lat,lng}) => {
           />
           <Marker position={[lat, lng]} icon={GetIcon()}>
             <Popup>
-              La ubicacion es {lat} {lng}. <br /> .
+              
+          The location is {lat} {lng}. <br /> .
             </Popup>
           </Marker>
         </MapContainer>

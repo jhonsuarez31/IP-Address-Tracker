@@ -4,7 +4,10 @@ import { useFetch } from "./hooks/useFetch";
 import { MapView } from "./components/MapView";
 import { Card } from "./components/Card";
 
+const API_KEY = import.meta.env.VITE_SOME_KEY
+
 export const AddressTrackerApp = () => {
+
   const [searchIP, setsearchIP] = useState("0");
 
   const [haveLine, setHaveLine] = useState(false)
@@ -13,13 +16,14 @@ export const AddressTrackerApp = () => {
   };
 
   const { data, isLoading } = useFetch(
-    `https://geo.ipify.org/api/v2/country,city?apiKey=at_Uu9f3xbpkQcDpTzDVzVOGIndcbT5h&ipAddress=${searchIP}`,
+    `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${searchIP}`,
     []
   );
   return (
-    <>
-      <Header onNewIP={(e) => onNewIP(e)} />
+    <>  
 
+      <Header onNewIP={(e) => onNewIP(e)} />
+      
       {isLoading ? (
         <div>Cargando</div>
       ) : (

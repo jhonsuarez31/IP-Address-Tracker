@@ -24,4 +24,5 @@ dist-ssr
 *.sw?
 
 
-APP_API_KEY='at_Uu9f3xbpkQcDpTzDVzVOGIndcbT5h'
+# api keys
+.env  
